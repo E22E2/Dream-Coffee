@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Coffee Shop</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- استدعاء خطوط جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- ربط ملف التصميم الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي (Header) -->
+    <header>
+        <div class="logo">
+            ☕ DREAM COFFEE
+        </div>
+        <nav class="glass-nav">
+    <ul>
+        <!-- أعطينا الرابط الأول كلاس active ليكون مفعلاً عند فتح الصفحة -->
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+    </ul>
+</nav>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <main id="home" class="hero">
+        
+        <!-- النصوص الترحيبية -->
+        <div class="hero-content">
+            <h1>Bean & Brown</h1>
+            <h2>Coffee shop</h2>
+            <p class="glass-nav">اكتشف تجربة القهوة المثالية مع متجر دريم. يتم تحميص خلطاتنا المتميزة بعناية لتوفير نكهة استثنائية في كل رشفة. لا تنتظر—اطلب مزيجك المفضل الآن"</p>
+            <a href="#menu" class="btn-order">Order Now</a>
+        </div>
+
+        <!-- المميزات الجانبية -->
+        <!-- قسم الدوائر الجانبية (فوائد القهوة) -->
+<div class="benefits-sidebar">
+    
+    <!-- الميزة 1: مضادات الأكسدة -->
+    <div class="benefit-circle">
+        <div class="benefit-icon">🛡️</div>
+        <p>تعتبر القهوة مصدرًا غنيًا بمضادات الأكسدة، حيث تحمي الجسم من تلف الخلايا وتساعد في الوقاية من الأمراض.</p>
+    </div>
+
+    <!-- الميزة 2: الطاقة والتركيز -->
+    <div class="benefit-circle">
+        <div class="benefit-icon">⚡</div>
+        <p>يعمل الكافيين الموجود في القهوة على تعزيز التركيز وتوفير الطاقة، مما يساعدك على البقاء متيقظًا ونشطًا طوال اليوم.</p>
+    </div>
+
+    <!-- الميزة 4: الذاكرة -->
+    <div class="benefit-circle">
+        <div class="benefit-icon">🧠</div>
+        <p>يمكن أن يؤدي تناول القهوة بانتظام إلى تحسين الذاكرة والوظيفة الإدراكية، مما يدعم الصحة العقلية على المدى الطويل.</p>
+    </div>
+
+
+</div>
+<!-- نهاية القسم الرئيسي (Hero) -->
+    </main>
+<!-- ========================================= -->
+    <!-- قسم قائمة القهوة (Menu) -->
+    <!-- ========================================= -->
+    <section id="menu" class="menu-section">
+        
+        <div class="section-title">
+            <h2>Our Menu</h2>
+            <p>اختر قهوتك المفضلة، المحمصة والمحضرة بشغف</p>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- الصنف الأول -->
+            <div class="menu-card">
+    <div class="menu-header">
+        <h4>Espresso</h4>
+        <span class="menu-price">$3.50</span>
+    </div>
+    <p>قهوة مركزة وغنية بالنكهة الأصلية لحبوب البن البرازيلية المحمصة بعناية.</p>
+    
+    <button class="order-btn" onclick="openOrderModal('Espresso')">طلب الآن</button>
+</div>
+
+            <!-- الصنف الثاني -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <h4>Cappuccino</h4>
+                    <span class="menu-price">$4.75</span>
+                </div>
+                <p>مزيج متناغم من الإسبريسو القوي، الحليب المبخر، وطبقة كثيفة من الرغوة الغنية.</p>
+            </div>
+
+            <!-- الصنف الثالث -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <h4>Caramel Macchiato</h4>
+                    <span class="menu-price">$5.20</span>
+                </div>
+                <p>إسبريسو غني مع حليب الفانيليا الناعم ورشة سخية من صوص الكراميل اللذيذ.</p>
+            </div>
+
+            <!-- الصنف الرابع -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <h4>Cold Brew</h4>
+                    <span class="menu-price">$4.50</span>
+                </div>
+                <p>قهوة مقطرة ببطء بالماء البارد لمدة 12 ساعة لضمان نكهة ناعمة ومنعشة تماماً.</p>
+            </div>
+
+            <!-- الصنف الخامس -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <h4>Dark Mocha</h4>
+                    <span class="menu-price">$5.00</span>
+                </div>
+                <p>إسبريسو ممزوج بشوكولاتة بلجيكية داكنة وحليب مبخر مغطى بالكريمة المخفوقة.</p>
+            </div>
+
+            <!-- الصنف السادس -->
+            <div class="menu-card">
+                <div class="menu-header">
+                    <h4>Turkish Coffee</h4>
+                    <span class="menu-price">$3.00</span>
+                </div>
+                <p>قهوة تركية تقليدية أصيلة غير مفلترة، مطبوخة ببطء مع نكهة الهيل القوية.</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- ========================================= -->
+    <!-- قسم معرض الصور (Gallery) -->
+    <!-- ========================================= -->
+    <section id="gallery" class="gallery-section">
+        
+        <div class="section-title">
+            <h2>Our Gallery</h2>
+            <p>ألقِ نظرة على أجواء مقهانا وتفاصيل تحضير قهوتك المفضلة</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- الصورة الأولى (حجم كبير) -->
+            <div class="gallery-item large">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80" alt="تحضير القهوة">
+                <div class="gallery-overlay">
+                    <h4>فن التحضير</h4>
+                    <p>نستخلص كل قطرة بشغف ودقة</p>
+                </div>
+            </div>
+
+            <!-- الصورة الثانية (عادية) -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&q=80" alt="حبوب القهوة">
+                <div class="gallery-overlay">
+                    <h4>حبوب مختارة</h4>
+                    <p>ننتقي أفضل حبوب البن البرازيلية</p>
+                </div>
+            </div>
+
+            <!-- الصورة الثالثة (طويلة) -->
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80" alt="أجواء المقهى">
+                <div class="gallery-overlay">
+                    <h4>أجواء المقهى</h4>
+                    <p>مكانك الهادئ للعمل والاسترخاء</p>
+                </div>
+            </div>
+
+            <!-- الصورة الرابعة (عادية) -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="لاتيه آرت">
+                <div class="gallery-overlay">
+                    <h4>لاتيه آرت</h4>
+                    <p>نرسم بالرغوة والحب من أجلك</p>
+                </div>
+            </div>
+
+            <!-- الصورة الخامسة (عادية) -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" alt="حلوى ومخبوزات">
+                <div class="gallery-overlay">
+                    <h4>مخبوزات طازجة</h4>
+                    <p>تكملة مثالية لكوب القهوة الخاص بك</p>
+                </div>
+            </div>
+
+            <!-- الصورة التاسعة (عادية) -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="مشروبات باردة">
+                <div class="gallery-overlay">
+                    <h4>انتعاش الصيف</h4>
+                    <p>خيارات متنوعة من القهوة الباردة والآيس كوفي</p>
+                </div>
+            </div>
+
+            <!-- الصورة العاشرة (عادية) -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" alt="قهوة وكتاب">
+                <div class="gallery-overlay">
+                    <h4>وقتك الخاص</h4>
+                    <p>رفيقك المثالي أثناء القراءة أو العمل</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="تفاصيل القهوة">
+                <div class="gallery-overlay">
+                    <h4>تفاصيل دافئة</h4>
+                    <p>نصنع قهوتك بحب واهتمام لتصنع يومك</p>
+                </div>
+            </div>
+        </div>
+        <!-- ========================================= -->
+    <!-- قسم التواصل معنا (Contact) -->
+    <!-- ========================================= -->
+    <section id="contact" class="contact-section">
+        
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>يسعدنا تواصلك معنا، نحن هنا دائماً لخدمتك واستقبال آرائك</p>
+        </div>
+
+        <div class="contact-container">
+            
+            <!-- البطاقة الأولى: معلومات التواصل -->
+            <div class="contact-info glass-card">
+                <h3>معلومات المقهى</h3>
+                <p>تفضل بزيارتنا أو تواصل معنا عبر القنوات التالية:</p>
+                
+                <div class="info-box">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h4>العنوان</h4>
+                        <p>العراق، واسط، الكوت، حي الجامعة</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-icon">📞</span>
+                    <div>
+                        <h4>رقم الهاتف</h4>
+                        <p>07701234567</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-icon">✉️</span>
+                    <div>
+                        <h4>البريد الإلكتروني</h4>
+                        <p>hello@dreamcoffee.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- البطاقة الثانية: نموذج المراسلة -->
+            <form id="contact-form" class="contact-form glass-card" style="direction: rtl; text-align: right;">
+                <h3>أرسل لنا رسالة</h3>
+                
+                <div class="input-group">
+                    <input type="text" id="contact-name" placeholder="الاسم الكريم" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="contact-email" placeholder="البريد الإلكتروني (اختياري)">
+                </div>
+                
+                <div class="input-group">
+                    <!-- استخدمنا textarea لتوفير مساحة كتابة كبيرة للرسالة -->
+                    <textarea id="contact-message" rows="5" placeholder="اكتب رسالتك أو استفسارك هنا..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-contact-btn">إرسال الرسالة</button>
+            </form>
+
+        </div>
+    </section>
+
+    </section>
+    <!-- القسم الثاني: معلومات عنا (يظهر عند التمرير للأسفل) -->
+    <section id="about" class="about-section">
+        <!-- استخدمنا كلاس glass-box الذي صنعناه سابقاً ليعطي خلفية ضبابية أنيقة خلف النص -->
+        <div class="about-content glass-box">
+            <h2>ABOUT US</h2>
+            <br>
+            <p>Our online coffee shop delivers high-quality, natural, and carefully selected coffee varieties right to your door. Every coffee bean is roasted with care to preserve its unique flavor.</p>
+            <br>
+            <p>- Natural and pure products: Made from 100% natural ingredients.</p>
+            <p>- Fast delivery: We ensure quick delivery, so every cup is fresh.</p>
+        </div>
+    </section>
+    <!-- ========================================= -->
+    <!-- نافذة معلومات الإدارة (تكون مخفية افتراضياً) -->
+    <!-- ========================================= -->
+    <div id="owner-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Management Info</h3>
+            
+            <div class="info-item">
+                <span class="info-icon">👤</span>
+                <p><strong>Owner:</strong> Mr. Alawi</p>
+            </div>
+            
+            <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <p><strong>Email:</strong> admin@dreamcoffee.com</p>
+            </div>
+            
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <p><strong>Location:</strong> Kut, Wasit Governorate, Iraq</p>
+            </div>
+        </div>
+    </div>
+    <div id="order-modal" class="modal-overlay">
+    <div class="modal-content" style="direction: rtl; text-align: right;">
+        <span class="close-order-btn close-btn">&times;</span>
+        <h3 style="margin-bottom: 10px;">تأكيد الطلب</h3>
+        <p id="selected-coffee-display" style="color: var(--accent-color); font-weight: bold; text-align: center; margin-bottom: 20px; font-size: 18px;"></p>
+        
+        <form id="coffee-order-form">
+            <div class="input-group">
+                <label for="customer-name">الاسم الكريم</label>
+                <input type="text" id="customer-name" required placeholder="مثال: علي نعيم">
+            </div>
+
+            <div class="input-group">
+                <label for="customer-phone">رقم الهاتف</label>
+                <input type="number" id="customer-phone" required placeholder="مثال: 07701234567">
+            </div>
+
+            <!-- حقل العنوان القديم -->
+            <div class="input-group">
+                <label for="customer-address">العنوان</label>
+                <input type="text" id="customer-address" required placeholder="مثال: واسط، الكوت، حي الجامعة">
+            </div>
+
+            <!-- ========================================= -->
+            <!-- التحديث الجديد: قسم الدفع الإلكتروني -->
+            <!-- ========================================= -->
+            
+            <div class="input-group">
+                <label for="payment-method">طريقة الدفع</label>
+                <!-- عند تغيير الخيار، سنقوم بإظهار أو إخفاء حقول البطاقة -->
+                <select id="payment-method" onchange="toggleCardFields()">
+                    <option value="cash">الدفع عند الاستلام (كاش)</option>
+                    <option value="card">بطاقة ائتمان (ماستر كارد / فيزا)</option>
+                </select>
+            </div>
+
+            <!-- حقول البطاقة (مخفية افتراضياً وتظهر فقط عند اختيار الدفع بالبطاقة) -->
+            <div id="card-details" style="display: none;">
+                <div class="input-group">
+                    <label for="card-number">رقم البطاقة (16 رقم)</label>
+                    <input type="text" id="card-number" placeholder="مثال: 4123 4567 8901 2345" maxlength="19">
+                </div>
+                
+                <div style="display: flex; gap: 10px;">
+                    <div class="input-group" style="flex: 1;">
+                        <label for="card-expiry">تاريخ الانتهاء</label>
+                        <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <label for="card-cvv">رمز CVV</label>
+                        <input type="password" id="card-cvv" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر الإرسال -->
+            <button type="submit" class="submit-order-btn">إرسال الطلب</button>
+        </form>
+    </div>
+</div>
+<!-- كود الجافا سكريبت لتغيير شكل الشريط عند التمرير -->
+    <script>
+    // 1. جلب جميع الأقسام والروابط
+    const sections = document.querySelectorAll('main, section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+// 2. إعدادات المراقب الذكي (النسخة المحدثة للأقسام الطويلة)
+    const observerOptions = {
+        root: null,
+        /* هذا السطر يصنع خطاً وهمياً في منتصف الشاشة لاصطياد القسم بدقة */
+        rootMargin: '-40% 0px -50% 0px', 
+        threshold: 0 
+    };
+
+    // 3. تشغيل المراقب
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // أولاً: نحذف الدائرة (الكلاس active) من جميع الروابط
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                // ثانياً: نجلب id القسم الذي نقف عليه الآن
+                const currentId = entry.target.getAttribute('id');
+                
+                // ثالثاً: نبحث عن الرابط الذي يطابق هذا القسم ونضيف له الدائرة
+                const activeLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, observerOptions);
+
+    // 4. تطبيق المراقبة على كل قسم في الموقع
+    sections.forEach(section => {
+        if(section.getAttribute('id')) {
+            observer.observe(section);
+        }
+    });
+    // === كود تفعيل نافذة الإدارة ===
+    const menuIcon = document.querySelector('.menu-icon');
+    const ownerModal = document.getElementById('owner-modal');
+    const closeModalBtn = document.querySelector('.close-btn');
+
+    // عند الضغط على الخطوط الثلاثة، افتح النافذة
+    menuIcon.addEventListener('click', () => {
+        ownerModal.classList.add('active');
+    });
+
+    // عند الضغط على علامة X، أغلق النافذة
+    closeModalBtn.addEventListener('click', () => {
+        ownerModal.classList.remove('active');
+    });
+
+    // إغلاق النافذة أيضاً إذا قام المستخدم بالضغط في أي مكان خارج الصندوق الزجاجي
+    window.addEventListener('click', (e) => {
+        if (e.target === ownerModal) {
+            ownerModal.classList.remove('active');
+        }
+    });
+    // === كود نظام الطلبات والتحقق من الهاتف ===
+    const orderModal = document.getElementById('order-modal');
+    const closeOrderBtn = document.querySelector('.close-order-btn');
+    const coffeeDisplay = document.getElementById('selected-coffee-display');
+    const orderForm = document.getElementById('coffee-order-form');
+
+    // دالة فتح نافذة الطلب عند الضغط على أي قهوة
+    function openOrderModal(coffeeName) {
+        coffeeDisplay.innerText = "الطلب: " + coffeeName; // عرض اسم القهوة المختارة
+        orderModal.classList.add('active');
+    }
+
+    // إغلاق النافذة
+    closeOrderBtn.addEventListener('click', () => {
+        orderModal.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === orderModal) {
+            orderModal.classList.remove('active');
+        }
+    });
+
+    // التحكم في إرسال الطلب والتحقق من الشروط
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // منع الصفحة من التحديث التلقائي
+
+        const phoneInput = document.getElementById('customer-phone').value;
+
+        // 1. شرط: أن يتكون من 11 رقم
+        if (phoneInput.length !== 11) {
+            alert('عذراً، رقم الهاتف يجب أن يتكون من 11 رقم بالضبط.');
+            return; // إيقاف الإرسال
+        }
+
+        // 2. شرط: أن يبدأ بـ 077 أو 078
+        if (!phoneInput.startsWith('077') && !phoneInput.startsWith('078')) {
+            alert('عذراً، يجب أن يبدأ رقم الهاتف بـ 077 أو 078 فقط.');
+            return; // إيقاف الإرسال
+        }
+
+        // إذا مرت كل الشروط بنجاح
+        alert('تم استلام طلبك بنجاح! سيتم التواصل معك قريباً.');
+        orderModal.classList.remove('active'); // إغلاق النافذة
+        orderForm.reset(); // تفريغ الحقول لطلب جديد
+    });
+    // === دالة إظهار وإخفاء حقول البطاقة بناءً على الاختيار ===
+    function toggleCardFields() {
+        const method = document.getElementById('payment-method').value;
+        const cardDetails = document.getElementById('card-details');
+        if (method === 'card') {
+            cardDetails.style.display = 'block';
+        } else {
+            cardDetails.style.display = 'none';
+        }
+    }
+
+    // === خوارزمية التحقق من صحة رقم الماستر كارد والفيزا (Luhn Algorithm) ===
+    function isValidCardNumber(number) {
+        // إزالة أي مسافات من الرقم
+        let cleaned = number.replace(/\D/g, ''); 
+        
+        // التأكد من أن الطول 16 رقم
+        if (cleaned.length !== 16) return false;
+        
+        // التأكد من البداية (4 للفيزا، 5 للماستر كارد)
+        if (!cleaned.startsWith('4') && !cleaned.startsWith('5')) return false;
+
+        // تطبيق خوارزمية لون (Luhn) الرياضية
+        let sum = 0;
+        let shouldDouble = false;
+        for (let i = cleaned.length - 1; i >= 0; i--) {
+            let digit = parseInt(cleaned.charAt(i));
+            if (shouldDouble) {
+                digit *= 2;
+                if (digit > 9) digit -= 9;
+            }
+            sum += digit;
+            shouldDouble = !shouldDouble;
+        }
+        // إذا كان المجموع يقبل القسمة على 10 بدون باقٍ، فالرقم صحيح رياضياً
+        return (sum % 10) === 0;
+    }
+
+    // === التحكم في إرسال الطلب النهائي ===
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+
+        const phoneInput = document.getElementById('customer-phone').value;
+        const paymentMethod = document.getElementById('payment-method').value;
+
+        // 1. التحقق من رقم الهاتف
+        if (phoneInput.length !== 11) {
+            alert('عذراً، رقم الهاتف يجب أن يتكون من 11 رقم بالضبط.');
+            return; 
+        }
+        if (!phoneInput.startsWith('077') && !phoneInput.startsWith('078')) {
+            alert('عذراً، يجب أن يبدأ رقم الهاتف بـ 077 أو 078 فقط.');
+            return; 
+        }
+
+        // 2. التحقق من البطاقة (فقط إذا اختار الدفع بالبطاقة)
+        if (paymentMethod === 'card') {
+            const cardNumber = document.getElementById('card-number').value;
+            const expiry = document.getElementById('card-expiry').value;
+            const cvv = document.getElementById('card-cvv').value;
+
+            if (!isValidCardNumber(cardNumber)) {
+                alert('عذراً، رقم البطاقة (الفيزا/ماستر كارد) غير صحيح. يرجى التأكد من الأرقام.');
+                return; // إيقاف الإرسال إذا كانت البطاقة وهمية أو مكتوبة خطأ
+            }
+
+            if(expiry === '' || cvv === '') {
+                alert('يرجى إدخال تاريخ الانتهاء ورمز CVV.');
+                return;
+            }
+        }
+
+        // إذا مرت كل الشروط بنجاح
+        alert('تم تأكيد طلبك بنجاح! شكراً لاختيارك Dream Coffee ☕');
+        orderModal.classList.remove('active'); 
+        orderForm.reset(); 
+        document.getElementById('card-details').style.display = 'none'; // إعادة إخفاء البطاقة للطلب القادم
+    });
+    // === كود نموذج التواصل (Contact Form) ===
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // لمنع تحديث الصفحة
+        
+        // استخراج اسم المرسل لعرضه في رسالة الشكر
+        const senderName = document.getElementById('contact-name').value;
+        
+        alert(`شكراً لتواصلك معنا يا ${senderName}! تم استلام رسالتك وسنقوم بالرد عليك في أقرب وقت.`);
+        
+        contactForm.reset(); // تفريغ الحقول بعد الإرسال
+    });
+</script>
+
+</body>
+</html>
