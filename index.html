@@ -16,7 +16,11 @@
     <!-- شريط التنقل العلوي (Header) -->
     <header>
         <div class="logo">
-            ☕ DREAM COFFEE
+            DREAM
+            <!-- كود أيقونة كوب القهوة (SVG) -->
+            <svg class="cup-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2,21V19H20V21H2M20,8V5H18V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z"/>
+            </svg>
         </div>
         <nav class="glass-nav">
     <ul>
@@ -36,9 +40,9 @@
         
         <!-- النصوص الترحيبية -->
         <div class="hero-content">
-            <h1>Bean & Brown</h1>
+            <h1>Best Coffee</h1>
             <h2>Coffee shop</h2>
-            <p class="glass-nav">اكتشف تجربة القهوة المثالية مع متجر دريم. يتم تحميص خلطاتنا المتميزة بعناية لتوفير نكهة استثنائية في كل رشفة. لا تنتظر—اطلب مزيجك المفضل الآن"</p>
+            <p class="glass-nav">اكتشف تجربة القهوة المثالية مع متجر دريم. يتم تحميص خلطاتنا المتميزة بعناية لتوفير نكهة استثنائية في كل رشفة. لا تنتظر—اطلب مزيجك المفضل الآن</p>
             <a href="#menu" class="btn-order">Order Now</a>
         </div>
 
@@ -79,63 +83,64 @@
         </div>
         
         <div class="menu-grid">
-            <!-- الصنف الأول -->
-            <div class="menu-card">
-    <div class="menu-header">
-        <h4>Espresso</h4>
-        <span class="menu-price">$3.50</span>
-    </div>
-    <p>قهوة مركزة وغنية بالنكهة الأصلية لحبوب البن البرازيلية المحمصة بعناية.</p>
     
-    <button class="order-btn" onclick="openOrderModal('Espresso')">طلب الآن</button>
-</div>
-
-            <!-- الصنف الثاني -->
-            <div class="menu-card">
-                <div class="menu-header">
-                    <h4>Cappuccino</h4>
-                    <span class="menu-price">$4.75</span>
-                </div>
-                <p>مزيج متناغم من الإسبريسو القوي، الحليب المبخر، وطبقة كثيفة من الرغوة الغنية.</p>
-            </div>
-
-            <!-- الصنف الثالث -->
-            <div class="menu-card">
-                <div class="menu-header">
-                    <h4>Caramel Macchiato</h4>
-                    <span class="menu-price">$5.20</span>
-                </div>
-                <p>إسبريسو غني مع حليب الفانيليا الناعم ورشة سخية من صوص الكراميل اللذيذ.</p>
-            </div>
-
-            <!-- الصنف الرابع -->
-            <div class="menu-card">
-                <div class="menu-header">
-                    <h4>Cold Brew</h4>
-                    <span class="menu-price">$4.50</span>
-                </div>
-                <p>قهوة مقطرة ببطء بالماء البارد لمدة 12 ساعة لضمان نكهة ناعمة ومنعشة تماماً.</p>
-            </div>
-
-            <!-- الصنف الخامس -->
-            <div class="menu-card">
-                <div class="menu-header">
-                    <h4>Dark Mocha</h4>
-                    <span class="menu-price">$5.00</span>
-                </div>
-                <p>إسبريسو ممزوج بشوكولاتة بلجيكية داكنة وحليب مبخر مغطى بالكريمة المخفوقة.</p>
-            </div>
-
-            <!-- الصنف السادس -->
-            <div class="menu-card">
-                <div class="menu-header">
-                    <h4>Turkish Coffee</h4>
-                    <span class="menu-price">$3.00</span>
-                </div>
-                <p>قهوة تركية تقليدية أصيلة غير مفلترة، مطبوخة ببطء مع نكهة الهيل القوية.</p>
-            </div>
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Espresso</h4>
+            <span class="menu-price">$3.50</span>
         </div>
+        <p>قهوة مركزة وغنية بالنكهة الأصلية لحبوب البن البرازيلية المحمصة بعناية</p>
+        <p></p>
+        <button class="order-btn" onclick="openOrderModal('Espresso')">اطلب الآن</button>
+    </div>
 
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Cappuccino</h4>
+            <span class="menu-price">$4.75</span>
+        </div>
+        <p>مزيج متناغم من الإسبريسو القوي، الحليب المبخر، وطبقة كثيفة من الرغوة الغنية</p>
+        <button class="order-btn" onclick="openOrderModal('Cappuccino')">اطلب الآن</button>
+    </div>
+
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Caramel Macchiato</h4>
+            <span class="menu-price">$5.20</span>
+        </div>
+        <p>إسبريسو غني مع حليب الفانيليا الناعم ورشة سخية من صوص الكراميل اللذيذ</p>
+        <button class="order-btn" onclick="openOrderModal('Caramel Macchiato')">اطلب الآن</button>
+    </div>
+
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Cold Brew</h4>
+            <span class="menu-price">$4.50</span>
+        </div>
+        <p>قهوة مقطرة ببطء بالماء البارد لمدة 12 ساعة لضمان نكهة ناعمة ومنعشة تماماً</p>
+        <button class="order-btn" onclick="openOrderModal('Cold Brew')">اطلب الآن</button>
+    </div>
+
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Dark Mocha</h4>
+            <span class="menu-price">$5.00</span>
+        </div>
+        <p>إسبريسو ممزوج بشوكولاتة بلجيكية داكنة وحليب مبخر مغطى بالكريمة المخفوقة</p>
+        <button class="order-btn" onclick="openOrderModal('Dark Mocha')">اطلب الآن</button>
+    </div>
+
+    <div class="menu-card">
+        <div class="menu-header">
+            <h4>Turkish Coffee</h4>
+            <span class="menu-price">$3.00</span>
+        </div>
+        <p>قهوة تركية تقليدية أصيلة غير مفلترة، مطبوخة ببطء مع نكهة الهيل </p>
+        <p>القوية</p>
+        <button class="order-btn" onclick="openOrderModal('Turkish Coffee')">اطلب الآن</button>
+    </div>
+
+</div>
     </section>
     <!-- ========================================= -->
     <!-- قسم معرض الصور (Gallery) -->
@@ -353,27 +358,7 @@
                 <!-- عند تغيير الخيار، سنقوم بإظهار أو إخفاء حقول البطاقة -->
                 <select id="payment-method" onchange="toggleCardFields()">
                     <option value="cash">الدفع عند الاستلام (كاش)</option>
-                    <option value="card">بطاقة ائتمان (ماستر كارد / فيزا)</option>
                 </select>
-            </div>
-
-            <!-- حقول البطاقة (مخفية افتراضياً وتظهر فقط عند اختيار الدفع بالبطاقة) -->
-            <div id="card-details" style="display: none;">
-                <div class="input-group">
-                    <label for="card-number">رقم البطاقة (16 رقم)</label>
-                    <input type="text" id="card-number" placeholder="مثال: 4123 4567 8901 2345" maxlength="19">
-                </div>
-                
-                <div style="display: flex; gap: 10px;">
-                    <div class="input-group" style="flex: 1;">
-                        <label for="card-expiry">تاريخ الانتهاء</label>
-                        <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
-                    </div>
-                    <div class="input-group" style="flex: 1;">
-                        <label for="card-cvv">رمز CVV</label>
-                        <input type="password" id="card-cvv" placeholder="123" maxlength="3">
-                    </div>
-                </div>
             </div>
 
             <!-- زر الإرسال -->
@@ -381,6 +366,7 @@
         </form>
     </div>
 </div>
+
 <!-- كود الجافا سكريبت لتغيير شكل الشريط عند التمرير -->
     <script>
     // 1. جلب جميع الأقسام والروابط
